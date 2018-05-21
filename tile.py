@@ -4,8 +4,8 @@ from constants import *
 
 class Tile:
     def __init__(self, i, j):
-        self.i = i
-        self.j = j
+        self.i = j
+        self.j = i
         self.w = screenSize // gridSize
         self.x = i * self.w
         self.y = j * self.w
@@ -22,9 +22,6 @@ class Tile:
         rect(window, white, (self.x, self.y, self.w, self.w))
         rect(window, gray(200), (self.x, self.y, self.w, self.w), 2)
         self.writeNum(window)
-
-    def shift(self):
-        pass
 
     def collapse(self):
         pass
